@@ -35,9 +35,9 @@ class NQueensGUI:
                 btn.grid(row=i, column=j)
                 row_buttons.append(btn)
             self.buttons.append(row_buttons)
-
-        self.btn_forbidden = tk.Button(self.master, text="Show Forbidden Squares", command=self.show_forbidden_squares)
-        self.btn_forbidden.pack(pady=10)
+        if not hasattr(self, 'btn_forbidden'):
+            self.btn_forbidden = tk.Button(self.master, text="Show Forbidden Squares", command=self.show_forbidden_squares)
+            self.btn_forbidden.pack(pady=10)
 
     def place_queen(self, x, y):
         color = "white" if (x + y) % 2 == 0 else "black"
