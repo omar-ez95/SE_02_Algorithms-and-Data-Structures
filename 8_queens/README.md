@@ -31,7 +31,7 @@ That means our solution will take n*(n-1)*(n-2)*...*1 = n! steps to find a solut
 Also at the end of each time we place the queens we have to check if our solution is a valid solution. That means we have to check if any two queens threaten each other. This will take n^2 steps.
 So our solution will take n! * n^2 steps to find a solution.
 and for the space complexity we will have n*n squares. So our space complexity will be O(n^2) = O(n^2) if we are not saving the valid solutions but printing them directly. If we save the solutions it will be O(n^2 * s) = O(n!). Where s is the number of the valid solutions.
-So Brute force is not a valid solution for this problem. Cause with a normal chess board we will have 64! steps to find a solution. That is a huge number.
+So Brute force is not a valid solution for this problem. Cause with a normal chess board we will have 64*63*...*57 steps to find a solution. That is a huge number.
 ### Backtracking
 #### Solution:
 If we to minimize the number of steps we have to take to find a solution we have to use backtracking. Backtracking is an algorithmic-technique for solving problems recursively by trying to build a solution incrementally, one piece at a time, removing those solutions that fail to satisfy the constraints of the problem at any point of time (by time, here, is referred to the time elapsed till reaching any level of the search tree).
