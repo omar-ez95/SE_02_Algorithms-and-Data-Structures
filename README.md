@@ -1,16 +1,15 @@
 # A* Algorithm,  8 Queens Problem Visualization and 0/1 Knapsack Problem
-- This repo contains the code for visualizing the A* algorithm and 8 queens problem using Tkinter. And also contains the code for solving the 0/1 Knapsack Problem using Dynamic Programming.
+- This repo contains the code for visualizing the A* algorithm and 8 queens problem using Tkinter. And also containmmms the code for solving the 0/1 Knapsack Problem using Dynamic Programming.
 - It is made for an assigment at the CODE University of Applied Sciences.
 - in each folder you will find a README.md file that explains the algorithm.
 
 ## Resources for the A* Algorithm and 8 Queens Problem
-1. The code has been written with a lot of help from chatGPT and also Github Copilot.
+1. https://en.wikipedia.org/wiki/Knapsack_problem#0-1_knapsack_problem
 2. https://en.wikipedia.org/wiki/Eight_queens_puzzle
 3. https://en.wikipedia.org/wiki/A*_search_algorithm
 4. https://www.geeksforgeeks.org/a-search-algorithm/
 5. https://www.geeksforgeeks.org/n-queen-in-on-space/
 6. https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
-7. https://en.wikipedia.org/wiki/Knapsack_problem#0-1_knapsack_problem
 
 ## Prerequisites
 
