@@ -32,6 +32,10 @@ Also at the end of each time we place the queens we have to check if our solutio
 So our solution will take n! * n^2 steps to find a solution.
 and for the space complexity we will have n*n squares. So our space complexity will be O(n^2) = O(n^2) if we are not saving the valid solutions but printing them directly. If we save the solutions it will be O(n^2 * s) = O(n!). Where s is the number of the valid solutions.
 So Brute force is not a valid solution for this problem. Cause with a normal chess board we will have 64*63*...*57 steps to find a solution. That is a huge number.
+
+![](./p1.jpeg)
+![](./p2.jpeg)
+
 ### Backtracking
 #### Solution:
 If we to minimize the number of steps we have to take to find a solution we have to use backtracking. Backtracking is an algorithmic-technique for solving problems recursively by trying to build a solution incrementally, one piece at a time, removing those solutions that fail to satisfy the constraints of the problem at any point of time (by time, here, is referred to the time elapsed till reaching any level of the search tree).
@@ -39,7 +43,9 @@ If we look at the problem we would realize that each time we place a queen we wi
 
 ![](./4.png)
 
-That means we only have to try placing each queen on one row/column. So we will have n*n steps to find a solution. 
+![](./p3.jpeg)
+![](./p4.jpeg)
+![](./p5.jpeg)
 
 > Also we could do it this time by having only one dimension array. We will have an array of size n. Each element of the array will represent the column of the queen and its index will represtent its row.
 
@@ -47,7 +53,7 @@ That means we only have to try placing each queen on one row/column. So we will 
 
 Also to check if two queens threaten each other we will have to check if they are in the same column or in the same diagonal. 2 Queens are in the same diagonal if the difference between their rows is equal to the difference between their columns. Ex: (1,1) and (3,3) are in the same diagonal. (1,1) and (3,2) are not in the same diagonal.
 
-Our solution will have the n3 functions. One to check if two queens are in the same diagonal or in the same column, one to print the solution and one will work recursivly to call it self each time it places a queen.
+Our solution will have the 3 functions. One to check if two queens are in the same diagonal or in the same column, one to print the solution and one will work recursivly to call it self each time it places a queen.
 ```python
 canPlace(k, i)
 // Returns true if a queen can be placed
