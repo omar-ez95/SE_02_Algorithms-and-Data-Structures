@@ -41,9 +41,9 @@ If we look at the problem we would realize that each time we place a queen we wi
 
 That means we only have to try placing each queen on one row/column. So we will have n*n steps to find a solution. 
 
-Also we could do it this time by having only one dimension array. We will have an array of size n. Each element of the array will represent the column of the queen in that row.
+> Also we could do it this time by having only one dimension array. We will have an array of size n. Each element of the array will represent the column of the queen and its index will represtent its row.
 
-Ex: [1,3,0,2] means we have a queen in the first row and first column, a queen in the second row and third column, a queen in the third row and first column and a queen in the fourth row and second column.
+> Ex: [1,3,0,2] means we have a queen in the first row and first column, a queen in the second row and third column, a queen in the third row and first column and a queen in the fourth row and second column.
 
 Also to check if two queens threaten each other we will have to check if they are in the same column or in the same diagonal. 2 Queens are in the same diagonal if the difference between their rows is equal to the difference between their columns. Ex: (1,1) and (3,3) are in the same diagonal. (1,1) and (3,2) are not in the same diagonal.
 
@@ -77,7 +77,6 @@ nQueens(k, n) :
   ```
 
 #### Analysis:
-So our solution will take n*n steps to find a solution. And for the space complexity we will have n*n squares. So our space complexity will be O(n^2) = O(n^2) if we are not saving the valid solutions but printing them directly. If we save the solutions it will be O(n^2 * s)Where s is the number of the valid solutions.
 The solution tree will look something like this:
 ![](./Backtracking.png)
 

@@ -11,15 +11,30 @@ The knapsack problem has been studied for more than a century, with early works 
 
 ## Solutions
 ### Brute Force using Recursion
-The concept of the solution is easy. We just need to generate all possible subsets of items and check the total weight and value of each subset and keep track of maximum value subset we have found so far. in other we will do something similler to a depth first search on all possible subsets and keep track of maximum value subset, where we take or leave the item on each node of the search tree.
-This solution will generate a tree of height n and each node will have two children. So the time complexity of this solution is O(2^n).
+The concept of the solution is easy. We just need to generate all possible subsets of items and check the total weight and value of each subset and keep track of maximum value subset we have found so far. in other words we will do something similler to a depth first search on all possible subsets and keep track of maximum value subset, where we take or leave the item on each node of the search tree.
+This solution will generate a tree of height n and each node will have two children.
+weights: [2, 3, 4]
+Values: [3, 4, 5]
+
+            (itemNumber, weightCarried)
+                      (0,0)
+            don't take       take 
+                /               \
+            (1,0)               (1,3)
+            /    \            /       \
+        (2,0)    (2,4)     (2,3)      (2,7)
+        /   \    /   \     /   \      /   \
+    (3,0)(3,5)(3,4)(3,9)(3,3)(3,8) (3,7) (3,12)
+
+                        
+So the time complexity of this solution is O(2^n).
 Which is a very bad solution for large inputs. cause we can't solve the problem for n>19 in a reasonable time.
 
 
 
 ### Dynamic programming 
 The only way to solve the problem is by having a faster solution. 
-To do so we would draw a solution tree to see what could we elemenate of the tree or is ther is anything are calculating more than once.
+To do so we would draw a solution tree to see what could we elemenate of the tree or are calculating something more than once.
 ![](./knapsack1.jpg)
 - If you look on the photo above you will see that we are calculating the same value more than once. Ex: the tree under B on the right side is the exact same tree under B on the left side. So we can eliminate the right side of the tree and keep the left side only. Also the subtree under all C nodes are the same so we can eliminate them too. 
 D node have also the same thing so we can eliminate them too. At the end we would be left with a very small subtree that we have to calculate only once and then reuse the result to calculate the other subtrees.
