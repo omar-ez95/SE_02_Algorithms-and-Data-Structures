@@ -9,7 +9,7 @@
 3. https://en.wikipedia.org/wiki/A*_search_algorithm
 4. https://www.geeksforgeeks.org/a-search-algorithm/
 5. https://www.geeksforgeeks.org/n-queen-in-on-space/
-6. https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/
+6. https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/ 
 
 ## Prerequisites
 
